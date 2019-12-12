@@ -26,14 +26,14 @@ touch .nojekyll
 
 echo "#################################################"
 echo "Now publishing"
-if [[ -z "${JEKYLL_PAT}" ]]; then
+if [[ -z "${secrets.JEKYLL_PAT}" ]]; then
   TOKEN=${GITHUB_TOKEN}
 else 
-  TOKEN=${JEKYLL_PAT}
+  TOKEN=${secrets.JEKYLL_PAT}
 fi
 
 echo GITHUB_TOKEN = ${GITHUB_TOKEN}
-echo JEKYLL_PAT = ${JEKYLL_PAT}
+echo JEKYLL_PAT = ${secrets.JEKYLL_PAT}
 echo TOKEN = ${TOKEN}
 echo remote_repo = https://${TOKEN}@github.com/${GITHUB_REPOSITORY}.git
 
