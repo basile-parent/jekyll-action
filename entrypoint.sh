@@ -27,6 +27,7 @@ touch .nojekyll
 echo "#################################################"
 echo "Now publishing"
 
+echo secrets : ${{ secrets.JEKYLL_PAT }}
 TOKEN=${{secrets.JEKYLL_PAT}}
 
 remote_repo="https://${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
